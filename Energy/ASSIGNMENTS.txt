@@ -1,0 +1,25 @@
+Welcome to the tutorial Energy.
+
+The energy consumption of an electric car shall be investigated.
+At a huge amount of test drives, the following data was collected:
+- the energy consumption [MJ] (variable y)
+- the duration of the drive [min] (variable X).
+
+Assignments:
+------------
+1. How many test drives have been performed?
+2. Plot the data.
+3. Perform a linear regression (no constant term, quadratic cost function).
+4. Estimate the energy consumption of a 20 min drive.
+5. Add the regression line to the plot.
+6. Compare the result with the regression line obtained by a MAP estimator.
+   You will need a really big parameter lambda to see a difference.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   assignmentEnergy.m
+   Energy.mat
+
+You can reload the prepared variables by typing  load('Energy.mat');
+
+Have fun!
