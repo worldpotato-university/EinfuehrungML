@@ -1,0 +1,40 @@
+Welcome to the tutorial Errors.
+
+In this tutorial, we investigate the performance of our neural nets
+for the MNIST data set.
+To keep things simple, we do without biases firstand start with a very
+simple learning strategy.
+
+Assignments:
+------------
+1. A script runMNIST.m is prepared for you. It basically contains the call
+   of the gradient descent learning procedure. A new block is included:
+   The call of the function calcErr, which shall assess the learning
+   progress. The error shall be calculated for the training data as well
+   as for the test data. Complete the function calcErr in file calcErr.m.
+2. A graphical output of the evolution of the errors shall be implemented
+   in runMNIST.m. Add the necessary plot commands. Do not forget to call
+   drawnow at the end of your plot commands.
+3. Let the net learn an see how the errors evolve. Change the constants such
+   as the amount of used images for training and test and the number of
+   neurons.
+4. Can you improve the net and its performance? You could change the
+   learning strategy (add momentum), the layers (add at least bias),
+   and the net structure.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   runMNIST.m
+   calcLinearLayer.m
+   calcSigmoidLayer.m
+   calcSoftmaxLayer.m
+   calcNumGradients.m - ERROR, could not be copied
+   calcErr.m
+   gradientDescent.m
+   nCrossEntropy.m
+   quadraticCosts.m
+   sigmoid.m
+   softmax.m
+   predict.m
+
+Have fun!
