@@ -1,0 +1,51 @@
+Welcome to the tutorial Pcaalg.
+
+We are going to perform a PCA in this session.
+In this directory, some functions have already been pre-defined for you.
+Some of the functions, however, need to be completed.
+The used data are artificial 3D data to make things simple.
+
+Assignments:
+------------
+1. A script runPCA3D.m is prepared which creates some data for a
+   principal component analysis, calls the PCA and displays the result.
+   You can call it by typing
+       runPCA3D
+   The call of the PCA is currently commented out. Run the script to
+   get a feeling for the data.
+2. Now, comment in the call of the computation of the statistics, the
+   PCA and of "plotAxes3D".
+   The function pca shall return the principal vectors as columns of the
+   matrix V, the mean value of the data and the singular values.
+   If only the data sample matrix X is provided to the function pca,
+   all principle axes shall be calculated. You will have to modify
+   pca.m (two lines) to make it work. Run the script and see if
+   reasonable principal vectors are plotted.
+3. We are now using the PCA to compress the data. Comment in the remaining
+   lines in runPCA3D. The function reduce shall project the data samples
+   in X onto the subspace defined by the principle vectors in V (one
+   vector per column). Visualize the results in 3D (already prepared in
+   runPCA3D) as well as 2D (by plotting the 2D coordinates or displaying
+   the numbers.
+4. (Optional) Write your own file runMNIST.m which reads in 50 MNIST digits
+   and performs a pca on it. Display the first 36 eigendigits and
+   the results of the PCA as you like.
+   Hint: The line
+              [imgs,lbls] = readMNIST( 'train', 50 );
+         reads in 50 digits (imgs is the data sample matrix, lbls are
+         the associated digit labels). The line
+              dispImage( imgs(i,:) );
+         displays an MNIST image.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   runPCA3D.m
+   pca.m
+   reduce.m
+   plotAxes3.m
+   statistics.m
+   Pcaalg.mat
+
+You can reload the prepared variables by typing  load('Pcaalg.mat');
+
+Have fun!
