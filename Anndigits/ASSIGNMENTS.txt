@@ -1,0 +1,49 @@
+Welcome to the tutorial Anndigits.
+
+In this tutorial, we apply neural nets to the MNIST data set.
+To keep things simple, we do without biases and start with a very
+simple learning strategy.
+
+Assignments:
+------------
+1. A script runMNIST.m is prepared for you. It currently provides one
+   5-dimensional sample as input with label 3. This simple setup is used
+   as test case for the implementation. You have to add the random
+   initialization of the weights W1, W2.
+2. The calculation of the derivatives have to be added in the function
+   gradientDescent:
+      - Add a forward pass (the calculation of Z1, Z2 and C by using
+        calcSigmoidLayer, calcSoftmaxLayer and nCrossEntropy.
+      - Add the mission backpropagation equations for delta2 and delta1.
+      - Add the equations for gradient descent (subtract a factor times
+        the gradient from the weights)
+      - Now, dCdW2sample and dCdW1sample should contain the gradients.
+        Compare the gradients with the numerical gradients by commenting in
+        the call of checkGradients. The rest of the loop calculates the
+        average over all samples (we just have one at the moment).
+   Run runMNIST and make sure that the gradient calculation is correct.
+3. Comment out checkGradients in gradientDescent again. You can also
+   replace the inconvenient loop for the average gradient by the two lines
+   below. Check that it still works.
+4. Go back to runMNIST and comment out line 4. The net will now learn
+   the first 100 digits (with very few hidden nodes).
+5. Play around with the constants. Learn 500 or 1000 digits.
+6. Use the learned weights to recognize digits which have not been learned
+   before.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   runMNIST.m
+   calcLinearLayer.m
+   calcSigmoidLayer.m
+   calcSoftmaxLayer.m
+   calcNumGradients.m
+   checkGradients.m
+   gradientDescent.m
+   nCrossEntropy.m
+   quadraticCosts.m
+   sigmoid.m
+   softmax.m
+   predict.m
+
+Have fun!
