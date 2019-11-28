@@ -1,0 +1,58 @@
+Welcome to the tutorial Annforwardpass.
+
+In this tutorial, we model a simple artificial neural net (ANN).
+The used data are low-dimensional and purely artificial so that you
+can follow the calculation process easily. We also do not want to
+let the ANN learn the weights, we perform a forward step through the
+net only.
+Assignments:
+------------
+1. A script runANNFP.m is prepared which sets the weights and calls the
+   layer-wise calculation.
+   You need to add a function 
+            Z = calcLinearLayer( X, W, b )
+   which calculates the layer output given the input X, the weights W
+   and the bias b.
+   Run runANNFP and interpret the result.
+2. Typical architectures include sigmoid nets. Modify runANNFP by two calls
+   of the kind
+            Z = calcSigmoidLayer( X, W, b )
+   Define the function calcSigmoidLayer. You can use the predefined
+   sigmoid function in file sigmoid.m.
+3. Another typical architectures is input -> sigmoid -> softmax.
+   Implement such a net. (You can use the prepared softmax function.)
+4. For an efficient implementation, the calculations should also work for
+   several inputs in a batch. Change the first line of runANNFP to
+                   X = [1 0 0.5;-1 0 0.5]
+   and check if the two inputs (one per row) are correctly processed.
+
+We would now like to measure how well the output of the net fits
+desired target values Y. Change back the input to X = [1 0 0.5].
+
+5. Consider a regression task (the output values are reals). A typical
+   structure is
+            input X -> sigmoid -> sigmoid -> output Z2.
+   We use the quadratic cost function to measure the goodness-of-fit
+   of Z2 and Y. Modify the function quadraticCosts appropriately and
+   check the result.
+6. Consider a classification task (the output values are probabilies
+   adding up to 1. A typical structure is
+            input X -> sigmoid -> softmax -> output Z2.
+   In this case, we typically use the n-cross entropy cost function
+   to measure the goodness-of-fit of Z2 and Y. Modify the function
+   nCrossEntropy appropriately and check the result.
+7. Check that the regression and the classification net including the
+   cost calculation (task 5. and 6.) also work for the batch
+                         X = [1 0 0.5;-1 0 0.5]
+   and (regression)      Y = [0.3 0.7 0.7; 0.8 0 0]
+   and (classification)  Y = [0.2 0.8 0; 0.7 0.3 0]  respectively
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   runANNFP.m
+   sigmoid.m
+   softmax.m
+   quadraticCosts.m
+   nCrossEntropy.m
+
+Have fun!
