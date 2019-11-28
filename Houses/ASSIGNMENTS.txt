@@ -1,0 +1,31 @@
+Welcome to the tutorial Houses.
+
+The price of houses in a specific region shall be investigated.
+A huge amount of recent house prices was collected, including:
+- the living area (Wohnfläche) and the plot area (Grundstücksfläche) [m²] (matrix X)
+- the price [€] (vector y).
+
+Assignments:
+------------
+1. How many house sales were recorded?
+2. Understand the contents of the matrix X and the vector y.
+   It is a good idea to print out the data of the first 10 entries.
+3. Plot the data.
+4. Perform a linear regression (no constant term, quadratic cost function).
+5. Estimate the price of a house with 150 m² living area and 500 m² plot area.
+
+Optional problem:
+By typing  load('houses2')  you obtain a second data set (watch out, the first
+data set is going to be erased!). This new data set contains an additional column
+which specifies if the house is located at a preferred location (1) or an ordinary
+one (0). Repeat the assignments 1-5 and find a way to use the new column.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   assignmentHouses.m
+   Houses2.mat
+   Houses.mat
+
+You can reload the prepared variables by typing  load('Houses.mat');
+
+Have fun!
