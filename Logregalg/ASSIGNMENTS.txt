@@ -1,0 +1,42 @@
+Welcome to the tutorial Logregalg.
+
+We are going to perform a logistic regression analysis in this session.
+In this directory, some functions have already been pre-defined for you.
+Some of the functions, however, need to be completed.
+The used data are artificial 2D data to make things simple.
+
+Assignments:
+------------
+1. A script runLogReg2D.m ist prepared which creates some data for a
+   logistic regression, calls the learning algorithm and displays the result.
+   You can call it by typing
+       runLogReg2D
+   The call of the gradient descent algorithm is currently commented out.
+   Run the script to get a feeling for the data.
+2. Now, comment in the call of the gradient descent algorithm. The functions
+   logRegHypo.m, crossEntropy.m and dCrossEntropyLogReg.m need to be adapted
+   to make the algorithm work. Keep in mind that all sample vectors contain
+   one sample per ROW. The parameter vector theta also stores all parameters
+   in one ROW. The derivative is not given in the slides of the lecture,
+   you have to calculate it on your own.
+   The formula of the cross-entropy is
+       C(h,y)    = -1/N \sum_{i=1}^N ( y_i \ln h_i + (1-y_i) \ln( 1 - h_i ) )
+       h_i       = \sigma( w'*x_i )
+       \sigma(x) = 1 / (1+\exp(-x))
+   We need the derivative with respect to the w.
+3. Check your solution with the slightly more difficult data set (3D data)
+   defined by the script runTest3D. If an error occurs, you probably need to
+   check the transpose signs in your equations.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   logRegHypo.m
+   crossEntropy.m
+   dCrossEntropyLogReg.m
+   runLogReg2D.m
+   gradientDescent.m
+   plotLogReg2D.m
+   sigmoid.m
+   runTest3D.m
+
+Have fun!

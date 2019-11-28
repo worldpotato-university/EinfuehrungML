@@ -1,0 +1,30 @@
+Welcome to the tutorial Logregmnist.
+
+We are going to perform a logistic regression analysis in this session.
+In this directory, all functions have already been pre-defined for you.
+
+Assignments:
+------------
+1. There is already our MNIST data set (the handwritten digits) prepared
+   for you. Run a logistic regression on them by typing
+      runMNIST
+   You will only see the progress of the regression and no images.
+   Try to interpret the code. What exactly is classified?
+2. If you are interested in the images, you can plot them by typing
+      dispImage( imgs(45,:) );
+   (or any other number between 1 and 60000).
+   Investigate the data set.
+3. Look at some images which are misclassified. Do you see any
+   communalities between them?
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   logRegHypo.m
+   crossEntropy.m
+   dCrossEntropyLogReg.m
+   gradientDescent.m
+   plotLogReg2D.m
+   sigmoid.m
+   runMNIST.m
+
+Have fun!
