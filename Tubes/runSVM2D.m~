@@ -1,0 +1,31 @@
+
+clf
+K = 100;
+[W,w0] = svmLearn(X, Y, K );
+
+W
+w0
+
+figure(1)
+clf
+plotLinSVM2D( X, Y, W, w0 )
+%%  
+% 1. Interpret the two variables W and w0 in the plot
+%%
+
+
+
+%%  
+% 3. Decide whether the new tube is produced by machine 1 or 2
+%    TODO: Add a line of code below.
+%plotGaussSVM2D( X, Y, W, w0, )
+%%
+plot([2.3, 7], '*')
+W*
+
+
+
+%% 
+% 4. Add a call to function svmPredict to do the same prediction as in
+%    task 3.
+%%

@@ -1,0 +1,45 @@
+Welcome to the tutorial Tubes.
+
+The data in this tutorial are 40 measurements of two different machines
+which produce tubes. The measurements contain the length of the tubes
+(which might be quite different due to different orders) and the thickness
+of the tube sheath (or tube jacket). Due to stability constraints, the
+machines produce thicker sheaths for longer tubes. The exact thickness is
+depending on the machine and random. In this tutorial, we use a simple
+linear SVM to distinguish between the two machines
+Assignments:
+------------
+1. A script runSVM2D.m is prepared which calls the SVM and displays the
+   result. You can call it by typing
+       runSVM2D
+   The SVM is already fully implemented (svmLearn.m, it contains a special
+   optimization algorithm called SMO, you do not need to understand it).
+   Interpret the results W and w0 of svmLearn which are processed in runSVM2D.m.
+2. Interpret the plot.
+3. A new tube shall be classified to be produced by machine 1 or machine 2.
+   The length of the tube is 2.3[m], the thickness is 7[mm].
+   Define a sample vector xsample with this measurement. Find a Matlab
+   formula which decides between the two machines based on W and w0.
+4. Replace this formula by a call to the function svmPredict.
+   This function looks very complicated, but this is only due to the fact
+   that it can also handle nonlinear SVMs. In the linear case (which we
+   have here) you only need to use the first 3 arguments.
+5. (Optional) To use a nonlinear SVM, add 'gaussian' as 4th argument
+   in the call of svmLearn and X and 'gaussian' as 4th and 5th argument
+   in the call of svmPredict. Replace the plot plotLinSVM2D by plotGaussSVM2D.
+   Load the already prepared data tubesnonlin.mat for this analysis.
+6. (Optional) Write a new file to classify 1000 MNIST digits by a SVM.
+
+The following file(s) were prepared for you in the current directory.
+Use them to perform the assignments:
+   plotLinSVM2D.m
+   plotGaussSVM2D.m
+   runSVM2D.m
+   svmLearn.m
+   svmPredict.m
+   tubesnonlin.mat
+   Tubes.mat
+
+You can reload the prepared variables by typing  load('Tubes.mat');
+
+Have fun!
